@@ -5,11 +5,11 @@
 | **Course** | CS-251 Design and Analysis of Algorithms (NUST / SINES) |
 | **Instructor** | Dr. Umer Asgher |
 | **Project ID** | 28 |
-| **Student name** | [TODO] |
-| **Student ID** | [TODO] |
-| **Group member (max 2)** | [TODO or "none"] |
-| **Python version** | [TODO - record output of `python --version`] |
-| **GitHub repository** | [TODO - URL] |
+| **Student name** | [Abdul Mashuod] |
+| **Student ID** | [530836] |
+| **Group member (max 2)** | [One-man Army] |
+| **Python version** | [python 3] |
+| **GitHub repository** | [https://github.com/abdulmashuod/project-28-exact-motif-finder] |
 
 > **Status: Phase 1 (skeleton).** The algorithm, validation, tracing, data
 > generation and experiments are **not implemented yet**. Every unfinished
@@ -68,7 +68,7 @@ plotting, timing or UI code; the oracle is used only by tests/experiments.
 
 ## Installation
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/abdulmashuod/project-28-exact-motif-finder>
 cd project-28-exact-motif-finder
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e .
