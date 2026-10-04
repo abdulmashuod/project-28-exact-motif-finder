@@ -1,0 +1,111 @@
+{
+  "_note": "Expected outputs are DERIVED BY HAND from the contract, never by running find_motifs. Add your own personally constructed cases (category 'personal') and write the prediction BEFORE running.",
+  "cases": [
+    {
+      "name": "official_overlap_example",
+      "category": "ordinary",
+      "sequence": "ATATA",
+      "motif": "ATA",
+      "expected_positions": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "multiple_non_overlapping",
+      "category": "ordinary",
+      "sequence": "ACGTACGT",
+      "motif": "CG",
+      "expected_positions": [
+        1,
+        5
+      ]
+    },
+    {
+      "name": "motif_equals_sequence",
+      "category": "boundary",
+      "sequence": "ACGT",
+      "motif": "ACGT",
+      "expected_positions": [
+        0
+      ]
+    },
+    {
+      "name": "motif_longer_than_sequence",
+      "category": "boundary",
+      "sequence": "ACG",
+      "motif": "ACGT",
+      "expected_positions": []
+    },
+    {
+      "name": "empty_sequence",
+      "category": "boundary",
+      "sequence": "",
+      "motif": "A",
+      "expected_positions": []
+    },
+    {
+      "name": "one_char_sequence_match",
+      "category": "boundary",
+      "sequence": "A",
+      "motif": "A",
+      "expected_positions": [
+        0
+      ]
+    },
+    {
+      "name": "no_match",
+      "category": "ordinary",
+      "sequence": "ACGT",
+      "motif": "TT",
+      "expected_positions": []
+    },
+    {
+      "name": "repeated_single_char",
+      "category": "boundary",
+      "sequence": "AAAA",
+      "motif": "AA",
+      "expected_positions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "PERSONAL_TODO_1",
+      "category": "personal",
+      "sequence": null,
+      "motif": null,
+      "expected_positions": null
+    },
+    {
+      "name": "PERSONAL_TODO_2",
+      "category": "personal",
+      "sequence": null,
+      "motif": null,
+      "expected_positions": null
+    }
+  ],
+  "invalid_inputs": [
+    {
+      "name": "invalid_char_in_sequence",
+      "sequence": "ACXT",
+      "motif": "A"
+    },
+    {
+      "name": "lowercase_in_sequence",
+      "sequence": "acgt",
+      "motif": "A"
+    },
+    {
+      "name": "empty_motif",
+      "sequence": "ACGT",
+      "motif": ""
+    },
+    {
+      "name": "invalid_char_in_motif",
+      "sequence": "ACGT",
+      "motif": "AN"
+    }
+  ]
+}
