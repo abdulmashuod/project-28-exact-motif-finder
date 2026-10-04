@@ -1,0 +1,45 @@
+{
+  "_note": "Official Project 28 scope. master_seed is a PLACEHOLDER: choose it yourself and record it in the decision log before generating data.",
+  "master_seed": null,
+  "sequence_lengths": [
+    50,
+    100,
+    200,
+    400
+  ],
+  "motif_lengths": [
+    2,
+    4,
+    8
+  ],
+  "families": [
+    "random",
+    "motif_rich",
+    "motif_poor"
+  ],
+  "family_parameters": {
+    "random": {
+      "_todo": "e.g. uniform base probabilities (document your rule)"
+    },
+    "motif_rich": {
+      "_todo": "e.g. planted motif copies / target density (document your rule)"
+    },
+    "motif_poor": {
+      "_todo": "e.g. sequence built to avoid the motif (document your rule)"
+    }
+  },
+  "replicates_per_setting": null,
+  "timing": {
+    "enabled": false,
+    "warmup_runs": 1,
+    "measured_runs": 5,
+    "statistic": "median",
+    "clock": "time.perf_counter"
+  },
+  "paths": {
+    "generated": "data/generated",
+    "metadata": "data/metadata",
+    "expected": "data/expected",
+    "raw_results": "results/raw"
+  }
+}
