@@ -1,0 +1,5 @@
+# Core algorithm: standard library only (no dependencies).
+# Testing
+pytest>=7.0
+# Plotting (Phase 9 only; never imported by src/motif_finder)
+matplotlib>=3.7
