@@ -5,9 +5,7 @@
 | **Course** | CS-251 Design and Analysis of Algorithms (NUST / SINES) |
 | **Instructor** | Dr. Umer Asgher |
 | **Project ID** | 28 |
-| **Student name** | Abdul Mashuod |
-| **Student ID** | 530836 |
-| **Group member (max 2)** | [One-man Army] |
+| **Group  Members** | Abdul Mashuod + Sameer Ahmad Buttar|
 | **Python version** | Python 3.13.14 |
 | **GitHub repository** | [https://github.com/abdulmashuod/project-28-exact-motif-finder] |
 
@@ -85,14 +83,14 @@ python scripts/generate_results.py   # Phase 9 (placeholder now)
 Running the algorithm from the command line: TODO (Phase 3 - small CLI/demo).
 
 ## Reproducing results
-TODO (Phase 14): list exact commands, seed (`experiments/config.json`),
+TODO (Phase 14):we will list exact commands, seed (`experiments/config.json`),
 Python version and machine details.
 
 ## Future interactive UI
 See `ui/README.md`. Planned for Phase 13; it will only use the core public API.
 
 ## Limitations
-TODO (fill honestly as the project develops): synthetic data only; DNA
+TODO (we will fill honestly as the project develops): synthetic data only; DNA
 alphabet only; exact matching only; timing is secondary and machine-dependent.
 
 ## Academic integrity / acknowledgement
