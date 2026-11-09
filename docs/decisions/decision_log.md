@@ -14,7 +14,7 @@ Consequences:
 
 ## D1 - Algorithm choice (DRAFT: fill in with your own evidence)
 Decision: Use naive exact matching as the assessed algorithm.
-Date: [TODO]
+Date: [9-11-26]
 Options considered: naive; KMP; [others you examined]
 Selected approach: naive
 Reason: Project 28 specifically assesses simple exact matching, and the project

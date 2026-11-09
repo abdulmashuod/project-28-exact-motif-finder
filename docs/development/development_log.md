@@ -33,3 +33,9 @@ Attempted Change: fixed the errors and instead of is None used len(str)==0 to ch
 Observed Result: didnt saved the file at first so didnt observe any change but after saving 10 passed and 16, skipped.
 
 Decision/ Next Step: validation is done, so phase 3: validation the matching loop is next.
+
+#### Entry 4
+Defect: the loop range range(0, n-m) skipped the last start position, so ATATA / ATA gave [0].
+Defect: a leftover """ from the old docstring caused an IndentationError, which broke every test file at collection.
+Fix and result: range(n - m + 1), the stray line removed, 11 passed, 15 skipped.
+Next step: Phase 4, the hand-derived counter tests

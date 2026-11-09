@@ -9,7 +9,7 @@ from motif_finder import find_motifs
 PHASE3 = pytest.mark.skip(reason="TODO Phase 3: find_motifs not implemented yet")
 
 
-@PHASE3
+
 def test_fixture_cases_match_expected(expected_cases):
     for case in expected_cases["cases"]:
         if case["sequence"] is None:      # unfilled personal placeholder
