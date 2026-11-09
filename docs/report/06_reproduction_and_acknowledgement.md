@@ -13,7 +13,7 @@ TODO
 TODO
 
 ## Permitted assistance used
-TODO (declare AI-tool assistance honestly)
+During phase 2 implementing input validation used Claude to review and debug the code.
 
 ## Individual contribution
 TODO
