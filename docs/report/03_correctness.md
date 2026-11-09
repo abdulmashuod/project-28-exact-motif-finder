@@ -16,7 +16,13 @@ TODO
 TODO
 
 ## Supporting arguments
-TODO: every valid start checked; match only if all m chars equal; overlaps not lost; invalid input rejected before matching.
+every valid start checked; match only if all m chars equal; overlaps not lost; invalid input rejected before matching.
+
 
 ## Hand-worked trace
-TODO (ATATA / ATA)
+(ATATA / ATA)
+index:    0 1 2 3 4
+text:     A T A T A
+start 0:  A T A
+start 1:    A T A
+start 2:      A T A
