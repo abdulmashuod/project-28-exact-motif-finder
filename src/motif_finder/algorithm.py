@@ -15,21 +15,29 @@ from .validation import validate_sequence, validate_motif
 
 
 def find_motifs(sequence: str, motif: str) -> MatchResult:
-    """Return every exact (including overlapping) occurrence of `motif`.
+    """Return every exact (including overlapping) occurrence of `motif`."""
 
-    Pseudocode (to be finalised in Phase 3):
-        validate inputs                         # raises ValidationError
-        for start in 0 .. n-m (inclusive):      # positions_examined += 1
-            for j in 0 .. m-1:
-                comparisons += 1                # count EVERY comparison
-                if sequence[start+j] != motif[j]: break
-            else: record `start`
-        If m > n the loop range is empty -> no positions, 0 comparisons.
+    validate_sequence(sequence)                  # raises ValidationError
+    validate_motif(motif)  
+    
+    n = len(sequence)
+    m = len(motif)
+    positions = [] 
+    comparisons = 0
+    positions_examined = 0 
 
-    Counting rule (decide + document in Phase 4): one comparison = one
-    evaluation of sequence[start+j] vs motif[j]; the mismatching comparison
-    that triggers `break` IS counted.
+    for start in range(n-m+1): 
+        positions_examined += 1
+        matched = True
+        for j in range(m):
+            comparisons += 1                # “every character comparison counts, including the mismatching one”
+            if sequence[start+j] != motif[j]: #One comparison = one evaluation of sequence[start+j] against motif[j]; the mismatching comparison is counted
+                matched = False 
+                break
+        if matched:
+            positions.append(start)
 
-    TODO (Phase 3-4): implement. Do not call the oracle from here.
-    """
-    raise NotImplementedError("Phase 3: implement naive matching with counters")
+    return MatchResult(positions = positions, comparisons = comparisons,
+                       positions_examined = positions_examined,
+                       sequence_length = n, motif_length= m)
+
