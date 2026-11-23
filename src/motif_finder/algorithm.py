@@ -30,7 +30,7 @@ def find_motifs(sequence: str, motif: str) -> MatchResult:
         positions_examined += 1
         matched = True
         for j in range(m):
-            comparisons += 1                # “every character comparison counts, including the mismatching one”
+            comparisons += 1                # "every character comparison counts, including the mismatching one"
             if sequence[start+j] != motif[j]: #One comparison = one evaluation of sequence[start+j] against motif[j]; the mismatching comparison is counted
                 matched = False 
                 break

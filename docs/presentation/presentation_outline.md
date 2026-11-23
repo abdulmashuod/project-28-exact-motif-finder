@@ -7,12 +7,7 @@
 5. Pseudocode
 6. Complexity - n, m, best/worst, space, why worst case happens
 7. Correctness argument - invariant + induction (short)
-8. Hand trace - ATATA/ATA, matches the program's trace output
-index:    0 1 2 3 4
-text:     A T A T A
-start 0:  A T A
-start 1:    A T A
-start 2:      A T A
+8. Hand trace - ATATA/ATA: [0, 2], 7 comparisons, 3 positions examined
 9. Dataset generation - hand-made vs generated, seed, rules
 10. Experimental design - n x m x family; operation counts primary
 11. Results - one table + one labelled figure

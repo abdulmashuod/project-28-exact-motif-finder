@@ -2,37 +2,27 @@
 
 ## Algorithm
 
-def find_motifs(sequence: str, motif: str) -> MatchResult:
-    Return every exact (including overlapping) occurrence of `motif`
-
-    validate_sequence(sequence)                  # raises ValidationError
-    validate_motif(motif)  
-    
-    n = len(sequence)
-    m = len(motif)
-    positions = [] 
-    comparisons = 0
-    positions_examined = 0 
-
-    for start in range(n-m+1): 
-        positions_examined += 1
-        matched = True
-        for j in range(m):
-            comparisons += 1                # “every character comparison counts, including the mismatching one”
-            if sequence[start+j] != motif[j]:
-                matched = False 
-                break
-        if matched:
-            positions.append(start)
-
-    return MatchResult(positions = positions, comparisons = comparisons,
-                       positions_examined = positions_examined,
-                       sequence_length = n, motif_length= m)
-
-
+The naive matcher examines every valid start position in the DNA sequence.
+At each start, it compares motif characters with the corresponding sequence
+characters one at a time and records the start only if every character matches.
+The search continues after a match so that overlapping occurrences are retained.
 
 ## Pseudocode
-TODO (final version matching algorithm.py)
+```
+validate sequence
+validate motif
+for each start from 0 through n-m:
+    positions_examined <- positions_examined + 1
+    matched <- true
+    for j from 0 through m-1:
+        comparisons <- comparisons + 1
+        if sequence[start+j] != motif[j]:
+            matched <- false
+            break
+    if matched:
+        append start to positions
+return positions and counters
+```
 
 ## Complexity
 n = sequence length, m = motif length. Worst case O(nm).
