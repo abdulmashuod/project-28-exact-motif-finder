@@ -9,10 +9,9 @@
 | **Python version** | Python 3.13.14 |
 | **GitHub repository** | [https://github.com/abdulmashuod/project-28-exact-motif-finder] |
 
-> **Status: Phase 1 (skeleton).** The algorithm, validation, tracing, data
-> generation and experiments are **not implemented yet**. Every unfinished
-> function raises `NotImplementedError` and carries a TODO naming its phase.
-> No experimental results exist yet.
+> **Status: Phase 4 (operation counters).** The skeleton, validation, and naive
+> matcher are implemented. Tracing, the oracle, data generation, and experiments
+> remain unfinished placeholders; no experimental results exist yet.
 
 ## Problem statement
 Given an uppercase DNA sequence (A, C, G, T only) and a non-empty motif, report

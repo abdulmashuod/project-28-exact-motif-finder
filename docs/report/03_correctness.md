@@ -20,9 +20,16 @@ every valid start checked; match only if all m chars equal; overlaps not lost; i
 
 
 ## Hand-worked trace
-(ATATA / ATA)
+### ATATA / ATA
+
+```
 index:    0 1 2 3 4
 text:     A T A T A
-start 0:  A T A
-start 1:    A T A
-start 2:      A T A
+start 0:  A T A       ✓ ✓ ✓  -> match at 0
+start 1:    A T A     ✗      -> mismatch at position 1
+start 2:      A T A   ✓ ✓ ✓  -> match at 2
+
+positions: [0, 2]
+comparisons: 3 + 1 + 3 = 7
+positions examined: 3
+```

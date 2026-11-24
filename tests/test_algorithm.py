@@ -6,7 +6,7 @@ the implementation. Remove the skip marker once find_motifs exists.
 import pytest
 from motif_finder import find_motifs
 
-PHASE3 = pytest.mark.skip(reason="TODO Phase 3: find_motifs not implemented yet")
+PHASE6 = pytest.mark.skip(reason="TODO Phase 6: oracle not implemented yet")
 
 
 
@@ -18,12 +18,28 @@ def test_fixture_cases_match_expected(expected_cases):
         assert result.positions == case["expected_positions"], case["name"]
 
 
-@PHASE3
 def test_operation_counters_consistent():
-    """TODO Phase 4: hand-derive expected comparisons for 2-3 tiny inputs
-    (e.g. ATATA / ATA) and assert them here; also positions_examined == n-m+1."""
+    # (sequence, motif, positions, comparisons, positions_examined)
+    cases = [
+        ("ATATA", "ATA", [0, 2], 7, 3),
+        ("ACGT", "TT", [], 3, 3),
+        ("AAAA", "AA", [0, 1, 2], 6, 3),
+    ]
+    for sequence, motif, positions, comparisons, examined in cases:
+        result = find_motifs(sequence, motif)
+        assert result.positions == positions
+        assert result.comparisons == comparisons
+        assert result.positions_examined == examined
+        assert result.positions_examined == len(sequence) - len(motif) + 1
 
 
-@PHASE3
+def test_motif_longer_than_sequence_has_zero_counts():
+    result = find_motifs("ACG", "ACGT")
+    assert result.positions == []
+    assert result.comparisons == 0
+    assert result.positions_examined == 0
+
+
+@PHASE6
 def test_matches_agree_with_oracle():
     """TODO Phase 6: compare against oracle_find_all on many small inputs."""
